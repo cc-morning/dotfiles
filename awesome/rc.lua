@@ -89,10 +89,10 @@ client.connect_signal("request::titlebars", function(c)
         bg_focus = client_color["focus_top"],
         bg_normal = client_color["normal_top"]
     }) : setup {
-		layout = wibox.layout.align.horizontal
-	}
+        layout = wibox.layout.align.horizontal
+    }
 
-	for _, v in ipairs({ "right", "bottom", "left" }) do
+    for _, v in ipairs({ "right", "bottom", "left" }) do
         awful.titlebar(c, {
             position = v,
             size = beautiful.inner_border_width,
@@ -100,7 +100,7 @@ client.connect_signal("request::titlebars", function(c)
             bg_normal = client_color["normal"]
         }) : setup {
             layout = wibox.layout.align.horizontal
-		}
+        }
 	end
 end)
 client.connect_signal("mouse::enter", function(c)
