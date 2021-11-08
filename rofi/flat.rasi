@@ -7,35 +7,35 @@
     bd: #474a51;
     bd-highlight: #6d7077;
     bd-outer: #000000;
-
-	text-color: @fg;
-	background-color: @bg;
-	y-offset: 25%;
-	width: 24em;
-	spacing: 0;
+    
+    text-color: @fg;
+    background-color: @bg;
+    y-offset: 25%;
+    width: 24em;
+    spacing: 0;
 }
 
 prompt {
-	text-color: @fg-dark;
-	padding: 0.5em 0.7em 0.15em 0.7em;
-	font: "Noto Sans CJK Regular 20";
+    text-color: @fg-dark;
+    padding: 0.5em 0.7em 0.15em 0.7em;
+    font: "Noto Sans CJK Regular 20";
 }
 
 entry {
-	placeholder-color: @fg-dark;
-	placeholder: "Search";
-	padding: 0.3em 0.5em 0.15em 0;
-	font: "Noto Sans CJK Regular 20";
+    placeholder-color: @fg-dark;
+    placeholder: "Search";
+    padding: 0.3em 0.5em 0.15em 0;
+    font: "Noto Sans CJK Regular 20";
 }
 
 listview {
-	background-color: @bg;
-	cycle: false;
-	dynamic: true;
-	padding: 0.3em 0 0.3em 0;
-	lines: 8;
-	border-color: @bd;
-	border: 2 0 0 0;
+    background-color: @bg;
+    cycle: false;
+    dynamic: true;
+    padding: 0.3em 0 0.3em 0;
+    lines: 8;
+    border-color: @bd;
+    border: 2 0 0 0;
 }
 
 element {
@@ -43,19 +43,19 @@ element {
 }
 
 element-icon {
-	size: 1em;
-	padding: 0.4em 0 0 0.8em;
+    size: 1em;
+    padding: 0.4em 0 0 0.8em;
 }
 
 element-text {
-	font: "Noto Sans CJK Regular 14";
-	padding: 0.3em 0.2em 0.3em 0.5em;
+    font: "Noto Sans CJK Regular 14";
+    padding: 0.3em 0.2em 0.3em 0.5em;
 }
 
 element selected {
-	background-color: @bg-highlight;
-	text-color: @fg-highlight;
-	border-radius: 0;
+    background-color: @bg-highlight;
+    text-color: @fg-highlight;
+    border-radius: 0;
 }
 
 element-text, element-icon {
