@@ -1,0 +1,16 @@
+font:
+  normal:
+    family: "JetBrains Mono"
+    style: Regular
+  size: 12
+background_opacity: 0.8
+window:
+  dimensions:
+    columns: 72
+    lines: 26
+  padding:
+    x: 15
+    y: 15
+  decorations: none
+import:
+  - ~/.config/alacritty/dracula.yml
