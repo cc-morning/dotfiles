@@ -7,7 +7,7 @@
     bd: #474a51;
     bd-highlight: #6d7077;
     bd-outer: #000000;
-    
+
     text-color: @fg;
     background-color: @bg;
     y-offset: 25%;

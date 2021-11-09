@@ -1,38 +1,44 @@
 local awful = require("awful")
 local wibox = require("wibox")
+local gears = require("gears")
+local beautiful = require("beautiful")
 local xresources = require("beautiful.xresources")
 local dpi = xresources.apply_dpi
 
-local widget_padding = 10
-local wibar_height = 32
+local taglist = require("widgets.taglist")
+local systray = require("widgets.systray")
+local network = require("widgets.network")
+local cpu = require("widgets.cpu")
+local memory = require("widgets.memory")
+local textclock = require("widgets.textclock")
 
--- Widget imports
-local mytaglist = require("widgets.taglist")
-local mysystray = require("widgets.systray")
-local mynetwork = require("widgets.network")
-local mycpu = require("widgets.cpu")
-local mymemory = require("widgets.memory")
-local mytextclock = require("widgets.textclock")
-
--- Activated widgets
 local right_widgets = {
-    -- mysystray,
-    mynetwork,
-    mycpu,
-    mymemory,
-    mytextclock
+    -- systray,
+    network,
+    cpu,
+    memory,
+    textclock
 }
 
 local wibar = {}
+
+local rrect = function(radius)
+    return function(cr, width, height)
+        gears.shape.rounded_rect(cr, width, height, radius)
+    end
+end
 
 function wibar.get(s)
     local mywibox = awful.wibar({
         position = "top",
         screen = s,
-        height = dpi(wibar_height)
+        width = dpi(beautiful.wibar_width),
+        height = dpi(beautiful.wibar_height),
+        opacity = beautiful.wibar_opacity
     })
+    mywibox.y = beautiful.useless_gap
 
-    local taglist = mytaglist.get(s)
+    local taglist = taglist.get(s)
 
     local left = {
         layout = wibox.layout.fixed.horizontal,
@@ -46,8 +52,8 @@ function wibar.get(s)
     for _,v in ipairs(right_widgets) do
         right[#right+1] = ({
             v,
-            left = widget_padding,
-            right = widget_padding,
+            left = beautiful.widget_padding,
+            right = beautiful.widget_padding,
             widget = wibox.container.margin
         })
     end

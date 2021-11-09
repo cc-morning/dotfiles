@@ -2,10 +2,6 @@ configuration {
     theme: "./flat.rasi";
     modi: "drun,run";
     location: 2;
-    fixed-num-lines: false;
-    show-icons: false;
-    display-window: "缾";
-    display-run: "";
-    display-drun: "";
-    display-emoji: "";
+    display-drun: "🔍";
 }
+

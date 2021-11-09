@@ -6,7 +6,7 @@ local dpi = xresources.apply_dpi
 
 local taglist = {}
 
-local taglist_padding = 26
+local taglist_padding = 15
 
 local taglist_buttons = gears.table.join(
     awful.button({ }, 1, function(t) t:view_only() end),
