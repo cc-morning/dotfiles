@@ -1,7 +1,6 @@
 configuration {
     theme: "./flat.rasi";
-    modi: "drun,run";
-    location: 2;
-    display-drun: "🔍";
+	modi: "drun,run";
+	location: 2;
+	display-drun: "🔍";
 }
-

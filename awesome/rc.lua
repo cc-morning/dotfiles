@@ -86,5 +86,5 @@ client.connect_signal("mouse::enter", function(c)
     c:emit_signal("request::activate", "mouse_enter", { raise = false })
 end)
 
-awful.spawn.with_shell("picom")
+awful.spawn.with_shell("~/.config/picom/picom")
 awful.spawn.with_shell("fcitx5")
